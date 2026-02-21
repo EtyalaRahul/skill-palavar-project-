@@ -49,7 +49,6 @@ User Input:
 Helpful Response:
 """
 )
-
 def ask_question(question: str):
     # New LangChain retriever API
     docs = retriever.invoke(question)
@@ -68,4 +67,5 @@ def ask_question(question: str):
     return {
         "answer": response.content,
         "docs_used": docs  
+
     }
