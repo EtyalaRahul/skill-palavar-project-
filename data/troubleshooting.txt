@@ -1,0 +1,6 @@
+Dell Latitude 5420 overheating issue:
+Cause: Dust accumulation in cooling fan.
+Fix:
+1. Clean fan vents
+2. Update BIOS
+3. Replace thermal paste if needed
