@@ -176,6 +176,10 @@ I’m your **AI Tech Support Assistant**, designed for real-world troubleshootin
 Start by describing your issue 👇
 """)
 
+
+
+
+## normal comment
 # =====================================================
 # CHAT HISTORY
 # =====================================================
