@@ -3,16 +3,16 @@ from dotenv import load_dotenv
 
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
 
 DB_PATH = "vector_db"
 
-llm = ChatGroq(
-    groq_api_key=os.getenv("GROQ_API_KEY"),
-    model_name="meta-llama/llama-4-scout-17b-16e-instruct",
+llm = ChatOpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),
+    model="gpt-6-astra",
     temperature=0.3
 )
 
@@ -49,6 +49,8 @@ User Input:
 Helpful Response:
 """
 )
+
+
 def ask_question(question: str):
     # New LangChain retriever API
     docs = retriever.invoke(question)
@@ -66,6 +68,5 @@ def ask_question(question: str):
 
     return {
         "answer": response.content,
-        "docs_used": docs  
-
+        "docs_used": docs
     }
